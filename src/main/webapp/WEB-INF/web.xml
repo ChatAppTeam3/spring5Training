@@ -6,7 +6,7 @@
 	<display-name>White Board System</display-name>
 	
 	<welcome-file-list>
-		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>LOG001.jsp</welcome-file>
 	</welcome-file-list>
 	
 	<listener>

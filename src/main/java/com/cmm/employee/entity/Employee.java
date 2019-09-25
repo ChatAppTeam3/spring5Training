@@ -57,10 +57,6 @@ public class Employee {
 	@Column(name = "updated_date")
 	public Timestamp updated_date;
 
-	public int getEmployee_id() {
-		return id;
-	}
-
 	public int getId() {
 		return id;
 	}
@@ -69,16 +65,20 @@ public class Employee {
 		this.id = id;
 	}
 
-	public void setEmployee_id(int employee_id) {
-		this.id = employee_id;
-	}
-
 	public Set<EmployeeAttendance> getEmployeeAttendance() {
 		return employeeAttendance;
 	}
 
 	public void setEmployeeAttendance(Set<EmployeeAttendance> employeeAttendance) {
 		this.employeeAttendance = employeeAttendance;
+	}
+
+	public String getEmployee_id() {
+		return employee_id;
+	}
+
+	public void setEmployee_id(String employee_id) {
+		this.employee_id = employee_id;
 	}
 
 	public String getEmployee_name() {
@@ -153,4 +153,5 @@ public class Employee {
 		this.updated_date = updated_date;
 	}
 
+	
 }

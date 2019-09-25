@@ -1,13 +1,14 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.myohtet</groupId>
-  <artifactId>spring5training</artifactId>
-  <packaging>war</packaging>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>spring5training Maven Webapp</name>
-  <url>http://maven.apache.org</url>
- <properties>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.myohtet</groupId>
+	<artifactId>spring5training</artifactId>
+	<packaging>war</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>spring5training Maven Webapp</name>
+	<url>http://maven.apache.org</url>
+	<properties>
 		<!-- Spring -->
 		<org.springframework.version>5.1.7.RELEASE</org.springframework.version>
 
@@ -20,6 +21,8 @@
 		<jta.version>1.1</jta.version>
 		<querydsl.version>4.2.1</querydsl.version>
 		<hsqldb.version>2.4.1</hsqldb.version>
+		<spring-security.version>4.0.2.RELEASE</spring-security.version>
+		<hibernate-validator.version>5.2.1.Final</hibernate-validator.version>
 
 		<!-- util -->
 		<guava.version>21.0</guava.version>
@@ -166,28 +169,71 @@
 			<version>1.2.4</version>
 		</dependency>
 		<dependency>
-    <groupId>org.webjars</groupId>
-    <artifactId>bootstrap</artifactId>
-    <version>4.3.1</version>
-</dependency>
-<dependency>
-        <groupId>org.webjars</groupId>
-        <artifactId>webjars-locator</artifactId>
-        <version>0.30</version>
-    </dependency>
-<dependency>
-    <groupId>org.webjars</groupId>
-    <artifactId>bootstrap-datepicker</artifactId>
-    <version>1.0.1</version>
-</dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>webjars-locator</artifactId>
+			<version>0.30</version>
+		</dependency>
 
-<dependency>
-    <groupId>org.webjars</groupId>
-    <artifactId>jquery</artifactId>
-    <version>3.4.1</version>
-</dependency>
-  </dependencies>
-  <build>
-    <finalName>spring5training</finalName>
-  </build>
+
+		<!-- Spring Security -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-core</artifactId>
+			<version>${spring-security.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+			<version>${spring-security.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+			<version>${spring-security.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-taglibs</artifactId>
+			<version>${spring-security.version}</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>${hibernate-validator.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>bootstrap</artifactId>
+			<version>4.3.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>bootstrap-datepicker</artifactId>
+			<version>1.0.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>jquery</artifactId>
+			<version>3.4.1</version>
+		</dependency>
+
+		<!-- For Generate Excel -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>3.15</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<finalName>spring5training</finalName>
+	</build>
 </project>
