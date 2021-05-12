@@ -21,7 +21,7 @@
 		<jta.version>1.1</jta.version>
 		<querydsl.version>4.2.1</querydsl.version>
 		<hsqldb.version>2.4.1</hsqldb.version>
-		<spring-security.version>4.0.2.RELEASE</spring-security.version>
+		<spring-security.version>5.2.10.RELEASE</spring-security.version>
 		<hibernate-validator.version>5.2.1.Final</hibernate-validator.version>
 
 		<!-- util -->
